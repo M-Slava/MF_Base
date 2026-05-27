@@ -71,16 +71,22 @@ dmFAPC.name = "DimensionalFluid"
 dmFAPC.richness = true
 data:extend{dmFAPC}
 
--- Dimensional Fluid to Water --
-local wR = {}
-wR.type = "recipe"
-wR.name = "mfWater"
-wR.energy_required = 0.3
-wR.enabled = false
-wR.category = "crafting-with-fluid"
-wR.ingredients =
+-- Dimensional Fluid to Water and Crude oil --
+local woR = {}
+woR.type = "recipe"
+woR.name = "mf-Water-and-Crude-oil"
+woR.icon = "__MF_Base_zoms__/graphics/resources/DimensionalFluidI.png"
+woR.icon_size = 64
+woR.energy_required = 0.5
+woR.enabled = false
+woR.category = "Elements"
+woR.subgroup = "Elements"
+woR.ingredients =
     {
-		{type="fluid", name="DimensionalFluid", amount=1}
+		{type="fluid", name="DimensionalFluid", amount=10}
     }
-wR.results = {{type="fluid", name="water", amount=10}}
-data:extend{wR}
+woR.results = {
+    {type = "fluid", name = "water", amount = 10},
+    {type = "fluid", name = "crude-oil", amount = 5}
+  }
+data:extend{woR}
