@@ -96,22 +96,93 @@ dmT.unit = {
 	}
 }
 dmT.effects = {
-  {type="unlock-recipe", recipe="mfStone"},
-  {type="unlock-recipe", recipe="mfWater"}
+  {type="unlock-recipe", recipe="mf-r-Stone"},
+  {type="unlock-recipe", recipe="mf-r-Coal"},
+  {type="unlock-recipe", recipe="mf-r-Iron-ore"},
+  {type="unlock-recipe", recipe="mf-r-Copper-ore"},
+  {type="unlock-recipe", recipe="mf-r-Uranium-ore"},
+  {type="unlock-recipe", recipe="mf-Water-and-Crude-oil"}
 }
 data:extend{dmT}
 
 -- Dimensional Ore to Stone Recipe --
 local sR = {}
 sR.type = "recipe"
-sR.name = "mfStone"
+sR.name = "mf-r-Stone"
 sR.enabled = false
-sR.energy_required = 0.3
+sR.subgroup = "MFResources"
+sR.energy_required = 0.6
 sR.ingredients =
     {
-      {type="item", name="DimensionalOre", amount=1}
+      {type="item", name="DimensionalSample", amount=3}
     }
 sR.results = {
   {type="item", name="stone", amount=3}
 }
 data:extend{sR}
+
+-- Dimensional Ore to Coal Recipe --
+local cR = {}
+cR.type = "recipe"
+cR.name = "mf-r-Coal"
+cR.enabled = false
+cR.subgroup = "MFResources"
+cR.energy_required = 0.6
+cR.ingredients =
+    {
+      {type="item", name="DimensionalSample", amount=3}
+    }
+cR.results = {
+  {type="item", name="coal", amount=3}
+}
+data:extend{cR}
+
+-- Dimensional Ore to Iron-ore Recipe --
+local ioR = {}
+ioR.type = "recipe"
+ioR.name = "mf-r-Iron-ore"
+ioR.enabled = false
+ioR.subgroup = "MFResources"
+ioR.energy_required = 0.6
+ioR.ingredients =
+    {
+      {type="item", name="DimensionalSample", amount=3}
+    }
+ioR.results = {
+  {type="item", name="iron-ore", amount=3}
+}
+data:extend{ioR}
+
+-- Dimensional Ore to Copper-ore" Recipe --
+local coR = {}
+coR.type = "recipe"
+coR.name = "mf-r-Copper-ore"
+coR.enabled = false
+coR.subgroup = "MFResources"
+coR.energy_required = 0.6
+coR.ingredients =
+    {
+      {type="item", name="DimensionalSample", amount=3}
+    }
+coR.results = {
+  {type="item", name="copper-ore", amount=3}
+}
+data:extend{coR}
+
+-- Dimensional Ore to Uranium-ore" Recipe --
+local uoR = {}
+uoR.type = "recipe"
+uoR.name = "mf-r-Uranium-ore"
+uoR.enabled = false
+uoR.category = "Elements"
+uoR.subgroup = "MFResources"
+uoR.energy_required = 0.6
+uoR.ingredients =
+    {
+      {type="item", name="DimensionalSample", amount=3},
+	  {type="fluid", name="DimensionalFluid", amount=15}
+    }
+uoR.results = {
+  {type="item", name="uranium-ore", amount=3}
+}
+data:extend{uoR}
