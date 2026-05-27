@@ -1,11 +1,21 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.7.2
+Date 27/05/2026
+  Changes:
+    - Added a new recipe - Coal
+    - Added a new recipe - Iron ore
+    - Added a new recipe - Copper ore
+    - Added a new recipe - Uranium ore
+    - Changed the recipe - Stone
+    - Changed the recipe - Water (Creation of crude oil and water by separation of Dimensional Fluid)
+---------------------------------------------------------------------------------------------------
 Version: 0.7.1
-Date 05/11/2026
+Date 11/05/2026
   Changes:
     - Add Russian localization
 ---------------------------------------------------------------------------------------------------
 Version: 0.7.0
-Date 05/11/2026
+Date 11/05/2026
   Changes:
     - Add Quality to GAPI.addButton
   Bugfixes:
